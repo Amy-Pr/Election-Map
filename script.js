@@ -1,4 +1,4 @@
-var candidate = function (name, partyColor){
+const candidate = function (name, partyColor){
     var politician = {};
       politician.name = name;
       politician.electionResults = null;
@@ -16,8 +16,8 @@ var candidate = function (name, partyColor){
     
   };
   
-  var politician1 = candidate("Sally", [132, 17, 11]);
-  var politician2 = candidate("Simon", [245, 141, 136]);
+  const politician1 = candidate("Sally", [132, 17, 11]);
+  const politician2 = candidate("Simon", [245, 141, 136]);
   
   
   
@@ -44,7 +44,7 @@ var candidate = function (name, partyColor){
   console.log(politician1.electionResults);
   console.log(politician2.electionResults);
   
-  var setStateResults = function (state) {
+  const setStateResults = function (state) {
     theStates[state].winner = null;
     
     if (politician1.electionResults[state] > politician2.electionResults[state]){
