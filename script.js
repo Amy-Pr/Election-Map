@@ -1,5 +1,5 @@
 const candidate = function (name, partyColor){
-    var politician = {};
+    let politician = {};
       politician.name = name;
       politician.electionResults = null;
       politician.totalVotes = 0;
@@ -54,14 +54,14 @@ const candidate = function (name, partyColor){
       theStates[state].winner = politician2;
     }
     
-  var stateWinner = theStates[state].winner;
+  const stateWinner = theStates[state].winner;
     if (stateWinner !== null){
       theStates[state].rgbColor = stateWinner.partyColor;
     } else {
       theStates[state].rgbColor = [11, 32, 57];
     }
     
-  var stateInfoTable = document.getElementById("stateResults");  
+  const stateInfoTable = document.getElementById("stateResults");  
   var header = stateInfoTable.children[0].children[0];
   var stateName = header.children[0];
   var stateAbbrev = header.children[1];
@@ -99,7 +99,7 @@ const candidate = function (name, partyColor){
   }*/
       
   
-  var table = document.getElementById("countryResults");
+  const table = document.getElementById("countryResults");
    
   table.children[0].children[0].children[0].innerText = politician1.name;
   table.children[0].children[0].children[1].innerText = politician1.totalVotes;
@@ -117,7 +117,7 @@ const candidate = function (name, partyColor){
   console.log(politician1.totalVotes);
   console.log(politician2.totalVotes);
   
-  var winner = "";
+  let winner = "";
   
   if (politician1.totalVotes > politician2.totalVotes){
     winner = politician1.name;
