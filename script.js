@@ -7,7 +7,7 @@ const candidate = function (name, partyColor){
     
       politician.tallyVotes = function() {
       this.totalVotes = 0;
-      for (var i = 0; i < this.electionResults.length; i++) {
+      for (let i = 0; i < this.electionResults.length; i++) {
        this.totalVotes = this.totalVotes + this.electionResults[i];
       }
   };
@@ -62,15 +62,15 @@ const candidate = function (name, partyColor){
     }
     
   const stateInfoTable = document.getElementById("stateResults");  
-  var header = stateInfoTable.children[0].children[0];
-  var stateName = header.children[0];
-  var stateAbbrev = header.children[1];
-  var body = stateInfoTable.children[1];
-  var name1 = body.children[0].children[0];
-  var result1 = body.children[0].children[1];
-  var name2 = body.children[1].children[0];
-  var result2 = body.children[1].children[1];
-  var winnerName = body.children[2].children[1];
+  let header = stateInfoTable.children[0].children[0];
+  let stateName = header.children[0];
+  let stateAbbrev = header.children[1];
+  let body = stateInfoTable.children[1];
+  let name1 = body.children[0].children[0];
+  let result1 = body.children[0].children[1];
+  let name2 = body.children[1].children[0];
+  let result2 = body.children[1].children[1];
+  let winnerName = body.children[2].children[1];
   
   
   stateName.innerText = theStates[state].nameFull;
