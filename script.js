@@ -17,7 +17,7 @@ const candidate = function (name, partyColor){
   };
   
   const politician1 = candidate("Sally", [132, 17, 11]);
-  const politician2 = candidate("Simon", [245, 141, 136]);
+  var politician2 = candidate("Simon", [245, 141, 136]);
   
   
   
