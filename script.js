@@ -46,11 +46,11 @@ const candidate = function (name, partyColor){
   
   const setStateResults = function (state) {
     theStates[state].winner = null;
-    
+    console.log(theStates);
     if (politician1.electionResults[state] > politician2.electionResults[state]){
       theStates[state].winner = politician1;
     
-    }else if (politician1.electionResults[state] < politician2.electionResults[state]){
+    } else if (politician1.electionResults[state] < politician2.electionResults[state]){
       theStates[state].winner = politician2;
     }
     
@@ -73,18 +73,18 @@ const candidate = function (name, partyColor){
   let winnerName = body.children[2].children[1];
   
   
-  stateName.innerText = theStates[state].nameFull;
-  stateAbbrev.innerText = theStates[state].nameAbbrev;
-  name1.innerText = politician1.name;
-  name2.innerText = politician2.name;
-  result1.innerText = politician1.electionResults[state];
-  result2.innerText = politician2.electionResults[state];
+  stateName.textContent = theStates[state].nameFull;
+  stateAbbrev.textContent = theStates[state].nameAbbrev;
+  name1.textContent = politician1.name;
+  name2.textContent = politician2.name;
+  result1.textContent = politician1.electionResults[state];
+  result2.textContent = politician2.electionResults[state];
     
     
   if (theStates[state].winner === null){
-      winnerName.innerText = "DRAW";
+      winnerName.textContent = "DRAW";
   } else {
-      winnerName.innerText = theStates[state].winner.name;
+      winnerName.textContent = theStates[state].winner.name;
   }
   
   /*if (politician1.electionResults[state] > politician2.electionResults[state]){
@@ -101,11 +101,11 @@ const candidate = function (name, partyColor){
   
   const table = document.getElementById("countryResults");
    
-  table.children[0].children[0].children[0].innerText = politician1.name;
-  table.children[0].children[0].children[1].innerText = politician1.totalVotes;
-  table.children[0].children[0].children[2].innerText = politician2.name;
-  table.children[0].children[0].children[3].innerText = politician2.totalVotes;
-  table.children[0].children[0].children[5].innerText = winner;
+  table.children[0].children[0].children[0].textContent = politician1.name;
+  table.children[0].children[0].children[1].textContent = politician1.totalVotes;
+  table.children[0].children[0].children[2].textContent = politician2.name;
+  table.children[0].children[0].children[3].textContent = politician2.totalVotes;
+  table.children[0].children[0].children[5].textContent = winner;
     
   };
   
@@ -132,6 +132,7 @@ const candidate = function (name, partyColor){
   }
   
   console.log (winner + " is the winner!");
+  
   
     
   
